@@ -1,0 +1,3 @@
+python-vlc
+keyboard
+win10toast

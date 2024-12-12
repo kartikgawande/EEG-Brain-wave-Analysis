@@ -1,0 +1,108 @@
+raw_dataset:
+  filepath: D:\Kartik\IIITB\Study\Sem 3\PE\Kedro\kartik-eeg\data\01_raw\raw_dataset.csv
+  type: pandas.CSVDataset
+  load_args:
+    header: 0
+    sep: ','
+    parse_dates: ['ftime']
+    date_format: "%H:%M:%S"
+  save_args:
+    index: False
+    date_format: "%H:%M:%S"
+
+training_stamps:
+  filepath: D:\Kartik\IIITB\Study\Sem 3\PE\Kedro\kartik-eeg\data\02_intermediate\video_data\trainingStampsNoTask3ForFirst15.csv
+  type: pandas.CSVDataset
+  load_args:
+    header: 0
+    sep: ','
+    parse_dates: ['start','end']
+    date_format: "%H:%M:%S"
+  save_args:
+    index: False
+    date_format: "%H:%M:%S"
+
+labeled_training_stamps:
+  filepath: D:\Kartik\IIITB\Study\Sem 3\PE\Kedro\kartik-eeg\data\03_feature\labeledTrainingStamps.csv
+  type: pandas.CSVDataset
+  load_args:
+    header: 0
+    sep: ','
+    parse_dates: ['start','end']
+    date_format: "%H:%M:%S"
+  save_args:
+    index: False
+    date_format: "%H:%M:%S"
+
+dataset:
+  filepath: D:\Kartik\IIITB\Study\Sem 3\PE\Kedro\kartik-eeg\data\04_primary\dataset.csv
+  type: pandas.CSVDataset
+  load_args:
+    header: 0
+    sep: ','
+    parse_dates: ['ftime']
+    date_format: "%H:%M:%S"
+  save_args:
+    index: False
+    date_format: "%H:%M:%S"
+
+interval_dataset:
+  filepath: D:\Kartik\IIITB\Study\Sem 3\PE\Kedro\kartik-eeg\data\04_primary\interval_dataset.csv
+  type: pandas.CSVDataset
+  load_args:
+    header: 0
+    sep: ','
+    parse_dates: ['ftime']
+    date_format: "%H:%M:%S"
+  save_args:
+    index: False
+    date_format: "%H:%M:%S"
+
+training_data:
+  filepath: D:\Kartik\IIITB\Study\Sem 3\PE\Kedro\kartik-eeg\data\05_model_input\trainingData.csv
+  type: pandas.CSVDataset
+  load_args:
+    header: 0
+    sep: ','
+    parse_dates: ['ftime']
+    date_format: "%H:%M:%S"
+  save_args:
+    index: False
+    date_format: "%H:%M:%S"
+
+testing_data:
+  filepath: D:\Kartik\IIITB\Study\Sem 3\PE\Kedro\kartik-eeg\data\05_model_input\testingData.csv
+  type: pandas.CSVDataset
+  load_args:
+    header: 0
+    sep: ','
+    parse_dates: ['ftime']
+    date_format: "%H:%M:%S"
+  save_args:
+    index: False
+    date_format: "%H:%M:%S"
+
+random_forest_model:
+  type: pickle.PickleDataset
+  filepath: D:\Kartik\IIITB\Study\Sem 3\PE\Kedro\kartik-eeg\data\06_models\randomForest.pkl
+
+
+knn_model:
+  type: pickle.PickleDataset
+  filepath: D:\Kartik\IIITB\Study\Sem 3\PE\Kedro\kartik-eeg\data\06_models\knn.pkl
+
+agnostic_random_forest_report:
+  type: json.JSONDataset
+  filepath: D:\Kartik\IIITB\Study\Sem 3\PE\Kedro\kartik-eeg\data\08_reporting\agnostic_random_forest_report.json
+
+agnostic_knn_report:
+  type: json.JSONDataset
+  filepath: D:\Kartik\IIITB\Study\Sem 3\PE\Kedro\kartik-eeg\data\08_reporting\agnostic_knn_report.json
+
+non_agnostic_random_forest_report:
+  type: json.JSONDataset
+  filepath: D:\Kartik\IIITB\Study\Sem 3\PE\Kedro\kartik-eeg\data\08_reporting\non_agnostic_random_forest_report.json
+
+non_agnostic_knn_report:
+  type: json.JSONDataset
+  filepath: D:\Kartik\IIITB\Study\Sem 3\PE\Kedro\kartik-eeg\data\08_reporting\non_agnostic_knn_report.json

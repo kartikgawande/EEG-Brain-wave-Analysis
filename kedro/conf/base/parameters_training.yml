@@ -1,0 +1,48 @@
+# This is a boilerplate parameters config generated for pipeline 'training'
+# using Kedro 0.19.9.
+# Documentation for this file format can be found in "Parameters"
+# Link: https://docs.kedro.org/en/0.19.9/configuration/parameters.html
+
+random_forest_training_params:
+  estimators_ratio : [0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1]
+  n_estimators: [100,150,200,250,300]
+  ng_n_estimators: [1,2,3,4,5]
+  reproducible_model: True
+
+knn_training_params:
+  neighbors_ratio : [0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1]
+  n_neighbors: [100,150,200,250,300]
+  weights: 'distance' #distance to become robust against outliers
+  algorithm: 'auto'
+
+tsne_viz_params:
+  participant: 5
+
+split_params:
+  test_size: 0.2
+  reproducible_split: True
+
+sprint_4_labels:
+  non-conflicting:
+    label: 0
+    files:
+    - 1.py
+  conflicting:
+    label: 1
+    files:
+    - 2.c
+    - 3.py
+    - 4.c
+
+sprint_5_labels:
+  non-conflicting:
+    label: 0
+    files:
+    - 1.py
+    - 2.py
+    - 3.py
+    - 4.py
+  conflicting:
+    label: 1
+    files:
+    - 3.py  

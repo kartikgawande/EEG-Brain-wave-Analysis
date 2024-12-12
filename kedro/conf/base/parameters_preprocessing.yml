@@ -1,0 +1,31 @@
+# This is a boilerplate parameters config generated for pipeline 'preprocessing'
+# using Kedro 0.19.9.
+#
+# Documentation for this file format can be found in "Parameters"
+# Link: https://docs.kedro.org/en/0.19.9/configuration/parameters.html
+
+two_min_training_intervals: False #set true if want to use actual intervals
+scattered_dataset_path: D:\Kartik\IIITB\Study\Sem 3\PE\Kedro\kartik-eeg\data\00_scattered\eeg_data
+y_col: label
+time_col: ftime
+task_one_files:
+  - features_1_1.csv
+  - features_1_4.csv
+  - features_1_5.csv
+  - features_1_6.csv
+  - features_1_7.csv
+  - features_1_8.csv
+task_two_files:
+  - features_2_1.csv
+  - features_2_4.csv
+  - features_2_5.csv
+  - features_2_6.csv
+  - features_2_7.csv
+  - features_2_8.csv
+task_three_files:
+  - features_3_1.csv
+  - features_3_4.csv
+  - features_3_5.csv
+  - features_3_6.csv
+  - features_3_7.csv
+  - features_3_8.csv

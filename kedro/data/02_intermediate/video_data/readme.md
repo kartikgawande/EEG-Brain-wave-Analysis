@@ -1,0 +1,1 @@
+10 and 22 have totally misalligned actual timestamps between video and eeg.
